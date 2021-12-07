@@ -39,7 +39,7 @@ class SecretSanta extends Component {
         let prmarr = prmstr.split("&");
         for ( let i = 0; i < prmarr.length; i++) {
             let tmparr = prmarr[i].split("=");
-            params[tmparr[0]] = tmparr[1];
+            params[tmparr[0]] = decodeURIComponent(tmparr[1]);
         }
         return params;
     }
