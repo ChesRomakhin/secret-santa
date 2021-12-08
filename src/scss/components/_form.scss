@@ -2,18 +2,19 @@
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     border-radius: 0.8rem; // in order for shadow to work
-    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.05);
 }
 
 .form {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .input {
-    width: 100%;
+    width: 50%;
     flex-grow: 1;
     border-top-left-radius: 0.8rem;
     border-bottom-left-radius: 0.8rem;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.05);
 }
 
 .add {
@@ -24,6 +25,7 @@
     background-image: $red-gradient;
     flex-grow: 1;
     width: 8rem;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.05);
 }
 
 .add:hover, .add:focus {
@@ -37,4 +39,20 @@
 .add-icon {
     height: 0.7rem;
     margin-right: 0.2rem;
+}
+
+.wishlist {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    width: 100%;
+    flex-grow: 1;
+    border: none;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.05);
+
+    &:focus-visible {
+        outline: none;
+    }
 }

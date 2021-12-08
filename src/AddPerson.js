@@ -4,8 +4,9 @@ import plus from './images/plus.svg';
 class AddPerson extends Component {
     handleAddPersonChild = (e) => {
         e.preventDefault();
-        const trimName = e.target.elements.name.value.trim();
-        this.props.handleAddPersonParent(trimName);
+        const name = e.target.elements.name.value.trim();
+        const wishlist = e.target.elements.wishlist.value;
+        this.props.handleAddPersonParent({name, wishlist});
         document.getElementById("name-form").reset();
     }
 
@@ -18,6 +19,7 @@ class AddPerson extends Component {
                         <img src={plus} className="add-icon" alt="plus-icon"/>
                         Add
                     </button>
+                    <textarea className="wishlist" name="wishlist" placeholder="Wishlist"/>
                 </form> 
             </div>
         )

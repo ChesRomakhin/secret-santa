@@ -1,6 +1,10 @@
 .note {
     padding: 1rem 2rem;
     text-align: center;
+
+    & h5 {
+        white-space: pre-line;
+    }
 }
 
 .note__title, .note__santa {
